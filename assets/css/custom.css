@@ -1,0 +1,388 @@
+
+:root{
+    --bgescuro : #095554;
+    --bgescuro2 :#053d3c;
+}
+
+/* .bg-white {
+  background-color: #0e7c7b !important;
+  color: #333 !important; 
+} */
+
+/* Reset completo de transições */
+.copy-email-btn,
+.copy-email-btn *,
+.copy-email-btn i,
+.copy-email-btn svg,
+.copy-email-btn:hover,
+.copy-email-btn:hover * {
+    transition: all 0s ease 0s !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+}
+
+.copy-email-btn {
+    border-color: none!important;
+    background-color: #16c4c1!important;
+    border: none!important;
+    font-weight: bold;
+    color: white;
+}
+
+.copy-email-btn i {
+    color: white!important;
+}
+
+.copy-email-btn svg {
+    fill: white!important;
+}
+
+.copy-email-btn:hover {
+    background-color: white !important;
+    color: var(--bgescuro)!important;
+}
+
+.copy-email-btn:hover svg path {
+    fill: var(--bgescuro)!important;
+    stroke: #095554 !important;
+    background-color: white!important;
+}
+
+.copy-email-btn:hover i {
+    fill: var(--bgescuro) !important;
+    color: var(--bgescuro) !important;
+    background-color: white!important;
+}
+
+
+.hfeed{
+    background-color: #0e7c7b !important;
+    color: white;
+}
+
+.text-tema-escuro {
+    color: var(--bgescuro) !important;
+}
+
+.bg-tema-escuro {
+    background-color: var(--bgescuro) !important;
+}
+.bg-tema-escuro2 {
+    background-color: var(--bgescuro2) !important;
+}
+
+
+.text-tema-claro {
+    color: #16c4c1 !important;
+}
+
+button.rounded-5:hover{
+ background-color: #0e7d7b;
+ border-color:#0e7d7b;
+ color: white;
+}
+
+.hfeed i {
+       color: #16c4c1;
+}
+
+.textshadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+small, .small {
+    font-size: .875em;
+    font-weight: 100;
+}
+
+/* BOTOES PRINCIPAIS */
+    .btn-fixed-height {
+        height: 120px; /* Altura fixa */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .btn-fixed-height {
+            height: 70px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .btn-fixed-height {
+            height: 65px;
+        }
+    }
+
+/* CONTAINERS PRINCIPAIS */
+
+.min-screen-container {
+    /* Desktop grande (≥1200px) */
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.vr {
+    height: 100px!important;
+}
+
+.law-icon {
+    align-content: center;
+    align-items: center;
+    vertical-align: center;
+    padding-top: 10px;
+    padding-left: 12px;
+    /* border-right: 1px solid #dee2e6 !important; */
+}
+
+#gotoabout-img {
+    object-fit: cover;
+    object-position: 74%!important;
+}
+
+.div-espaco {
+    height: 150px;
+    background: transparent; /* Mantém branco/transparente */
+  }
+
+
+.border-col {
+    border-right: 1px solid #dee2e6 !important;
+}
+
+.vc_row {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.vc_inner
+{
+    font-family: "Nunito Sans", Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+}
+.icon-equipe.vc_li-display:before{
+    content: "\e811"!important;
+}
+.icon-partner.vc_li-display:before{
+    content: "\e810"!important;
+    font-size: calc(1rem + 2vw)!important;
+}
+
+[class*=" vc_li-"]:before, [class^=vc_li-]:before {
+    font-family: vc_linecons;
+    font-style: normal!important;
+    font-weight: 100;
+    speak: none;
+    display: inline-block;
+    font-variant: normal;
+    line-height: inherit;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    font-size: 55px!important;
+}
+
+.font-small,p{
+    font-size: calc(.7rem + 0.4vw);
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Laptops pequenos e tablets grandes (992px - 1199px) */
+@media (max-width: 1199.98px) {
+    .min-screen-container {
+        min-height: calc(100vh - 100px);
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991.98px) {
+    .min-screen-container {
+        min-height: calc(100vh - 80px);
+    }
+
+    [class*=" vc_li-"]:before, [class^=vc_li-]:before {
+        font-size: 45px!important;
+    }
+
+
+    
+}
+
+/* Tablets pequenos e celulares grandes (576px - 767px) */
+@media (max-width: 767.98px) {
+    .min-screen-container {
+        min-height: calc(100vh - 75px);
+    }
+
+    [class*=" vc_li-"]:before, [class^=vc_li-]:before {
+        font-size: 35px!important;
+    }
+
+    .vc_row{
+        border-bottom: none !important;
+    }
+
+    .vc_inner .col-12{
+        border-bottom: 1px solid #dee2e6 !important;
+        padding-top: 25px;
+     }
+}
+
+/* Celulares (≥576px) */
+@media (max-width: 575.98px) {
+    .min-screen-container {
+        min-height: calc(100vh - 65px);
+    }
+
+    [class*=" vc_li-"]:before, [class^=vc_li-]:before {
+        font-size: 40px!important;
+    }
+
+    .law-icon{
+        border-right: none!important;
+    }
+
+     .tm-cta3-content-wrapper{
+        border-bottom: 1px solid #dee2e6 !important;
+        padding-bottom: 15px;
+     }
+}
+
+/* Telas muito pequenas (<400px) */
+@media (max-width: 399.98px) {
+    .min-screen-container {
+        min-height: calc(100vh - 60px);
+    }
+}
+
+/* Modo paisagem em celulares */
+@media (max-height: 500px) and (orientation: landscape) {
+    .min-screen-container {
+        min-height: calc(100vh - 50px);
+    }
+}
+
+
+
+/* Adiciona espaço invisível antes do elemento alvo */
+/* Para todos os elementos alvo */
+[id] {
+    scroll-margin-top: 98px;
+}
+
+
+.service-item {
+    height: 300px!important;
+}
+.service-item:hover a.btn {
+    bottom: -10px!important;
+}
+
+.service-item .service-icon {
+    background: #0F2A44;
+}
+
+.service-icon-people{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6B1E2E!important;
+    border-radius: 50%;
+    transform: rotate(-14deg);
+}    
+
+.service-item .service-icon-people i {
+    transform: rotate(15deg);
+}
+
+#btn-agendar{
+    display: none;
+}
+.desktop-only {
+    display: block;
+    /* position: relative; 
+    overflow: hidden;    */
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none !important;
+    }
+    
+    .mobile-only {
+      display: block !important;
+    }
+    #btn-agendar {
+        display: block !important;
+      }
+
+  }
+  /* #agenda-iframe {
+    position: absolute !important;
+    top: -147x !important;    
+    left: 0 !important;
+    width: 100% !important;
+    height: 106% !important;  
+    border: none;
+  } */
+
+  #footer-placeholder{
+    background-color: var(--bgescuro2);
+}
+
+/* Logo Responsiva para Menu Bootstrap */
+.navbar-brand .logo-img {
+    /* Tamanho base para desktop */
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    transition: all 0.3s ease;
+}
+
+/* Para telas menores (tablet) */
+@media (max-width: 992px) {
+    .navbar-brand .logo-img {
+        height: 45px;
+        max-width: 180px;
+    }
+}
+
+/* Para telas pequenas (mobile) */
+@media (max-width: 768px) {
+    .navbar-brand .logo-img {
+        height: 40px;
+        max-width: 160px;
+    }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 576px) {
+    .navbar-brand .logo-img {
+        height: 35px;
+        max-width: 140px;
+    }
+}
+
+/* Para telas grandes (acima de 1900px) */
+@media (min-width: 1900px) {
+    .navbar-brand .logo-img {
+        height: 60px;
+        max-width: 240px;
+    }
+}

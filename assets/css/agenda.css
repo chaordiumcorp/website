@@ -1,0 +1,104 @@
+.agenda-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: #0F2A44; /* empresas */ 
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.agenda-container h2 {
+  font-size: clamp(22px, 4vw, 32px);
+  margin: 0;
+}
+
+.agenda-container p {
+  font-size: clamp(14px, 3vw, 18px);
+  margin: 0;
+}
+
+/* Container para o iframe (visível no desktop) */
+.iframe-desktop-container {
+  display: block; /* Visível no desktop por padrão */
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* Proporção 4:3 para calendários */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.iframe-desktop-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Botão mobile (oculto no desktop por padrão) */
+.agenda-mobile-btn {
+  display: none; /* Escondido no desktop */
+  background: #C9A24D;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: clamp(16px, 2vw, 20px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.agenda-mobile-btn:hover,
+.agenda-mobile-btn:focus {
+  background: #b89136;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.agenda-mobile-btn:active {
+  transform: translateY(0);
+}
+
+/* RESPONSIVIDADE PARA MOBILE */
+@media (max-width: 768px) {
+  .agenda-container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  /* OCULTAR IFRAME NO MOBILE */
+  .iframe-desktop-container {
+    display: none !important;
+  }
+
+  /* MOSTRAR BOTÃO NO MOBILE */
+  .agenda-mobile-btn {
+    display: block !important;
+  }
+}
+
+/* GARANTIR COMPORTAMENTO NO DESKTOP */
+@media (min-width: 769px) {
+  /* Forçar visibilidade do iframe no desktop */
+  .iframe-desktop-container {
+    display: block !important;
+  }
+  
+  /* Forçar ocultação do botão no desktop */
+  .agenda-mobile-btn {
+    display: none !important;
+  }
+}

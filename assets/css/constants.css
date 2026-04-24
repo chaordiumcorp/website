@@ -1,0 +1,224 @@
+/* constants.css - Placeholders e estilos de email */
+[data-const]:not([data-processed]),
+[data-const-href]:not([data-processed]),
+[data-const-tel]:not([data-processed]),
+[data-const-mailto]:not([data-processed]) {
+    position: relative;
+}
+
+/* Placeholder para texto */
+[data-const]:not([data-processed]):not(i):not(.icon):not([class*="fa-"]):not([class*="bi-"]):not(svg),
+[data-const-href]:not([data-processed]):not(i):not(.icon):not([class*="fa-"]):not([class*="bi-"]):not(svg),
+[data-const-tel]:not([data-processed]):not(i):not(.icon):not([class*="fa-"]):not([class*="bi-"]):not(svg),
+[data-const-mailto]:not([data-processed]):not(i):not(.icon):not([class*="fa-"]):not([class*="bi-"]):not(svg) {
+    display: inline-block;
+    min-width: 60px;
+    min-height: 1em;
+    background: linear-gradient(90deg, #f5f5f5 25%, #e8e8e8 50%, #f5f5f5 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+    border-radius: 3px;
+    color: transparent !important;
+    vertical-align: middle;
+}
+
+/* Links não clicáveis enquanto carregam */
+[data-const-href]:not([data-processed]),
+[data-const-tel]:not([data-processed]), 
+[data-const-mailto]:not([data-processed]) {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Quando processado */
+[data-processed="true"] {
+    background: none !important;
+    animation: none !important;
+    color: inherit !important;
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Estilos específicos para emails com cópia */
+.email-with-copy {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.email-copy-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.email-link {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s;
+}
+
+.email-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.copy-email-btn {
+    /* background: #f8f9fa; */
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: white; 
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.copy-email-btn:hover {
+    background: #e9ecef;
+    border-color: #ced4da;
+    color: red;
+    /* color: #495057; */
+}
+
+.copy-email-btn:active {
+    transform: scale(0.95);
+}
+
+.copy-email-btn i {
+    font-size: 12px;
+}
+
+/* Tooltip para botão de copiar */
+.copy-email-tooltip {
+    position: absolute;
+    top: 50%;
+    left: 100%;           /* Coloca à direita do elemento */
+    transform: translateY(-50%) translateX(10px); /* Centraliza verticalmente */
+    white-space: nowrap;  /* Texto em uma linha só */
+
+    bottom: 100%;
+    /* background: #333; */
+    /* color: white; */
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    z-index: 10000;
+    pointer-events: none;
+}
+.copy-tooltip::before {
+    content: '';
+    position: absolute;
+    right: 100%;          /* Triângulo fica à esquerda do balão */
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-right-color: #333; /* Triângulo aponta para o botão */
+}
+.copy-email-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #333;
+}
+
+.copy-email-btn:hover .copy-email-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Toast notifications */
+.constants-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border-left: 4px solid #4CAF50;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 16px 20px;
+    max-width: 350px;
+    max-height: fit-content;
+    z-index: 9999;
+    transform: translateX(120%);
+    transition: transform 0.3s ease-out;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.constants-toast.show {
+    transform: translateX(0);
+}
+
+.constants-toast-error {
+    border-left-color: #f44336;
+}
+
+.constants-toast-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.constants-toast-icon {
+    font-size: 20px;
+    min-width: 20px;
+}
+
+.constants-toast-icon.fa-check-circle {
+    color: #4CAF50;
+}
+
+.constants-toast-icon.fa-exclamation-circle {
+    color: #f44336;
+}
+
+.constants-toast-message {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .constants-toast {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+        transform: translateY(100%);
+    }
+    
+    .constants-toast.show {
+        transform: translateY(0);
+    }
+    
+    .copy-email-tooltip {
+        display: none;
+    }
+    
+    .copy-email-btn::after {
+        content: 'Copiar';
+        font-size: 11px;
+        margin-left: 4px;
+    }
+    
+    .email-with-copy {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+}
+

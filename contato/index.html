@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CONTATO - Advocacia Patrícia Ferreira</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/assets/css/fontellod4d0.css" rel="stylesheet">
+    <!-- <link href="./assets/css/js_composer.css" rel="stylesheet"> -->
+
+
+
+    <!-- Preload crítico -->
+    <!-- <link rel="preload" href="./assets/js/constants-loader.js" as="script">
+    <link rel="preload" href="./assets/css/constants.css" as="style"> -->
+    
+    <!-- Fallback CSS (carrega rápido) -->
+    <link rel="stylesheet" href="/assets/css/constants.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/agenda.css">
+
+    <style>
+        
+        .contact-container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .contact-header {
+            background: linear-gradient(135deg, #4a6cf7 0%, #2a4bd7 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .contact-subtitle {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        .contact-body {
+            padding: 40px;
+        }
+        
+        /* Grid do formulário */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-group {
+            margin-bottom: 25px;
+        }
+        
+        .contact-full {
+            grid-column: 1 / -1;
+        }
+        
+        /* Campos do formulário */
+        .contact-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #444;
+            font-size: 14px;
+        }
+        
+        .contact-label .required {
+            color: #e74c3c;
+            margin-left: 3px;
+        }
+        
+        .contact-field {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+        
+        .contact-field:focus {
+            border-color: #4a6cf7;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+            background: #fff;
+        }
+        
+        .contact-field::placeholder {
+            color: #95a5a6;
+        }
+        
+        textarea.contact-field {
+            min-height: 150px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+        
+        /* VALIDAÇÃO CSS PURO */
+        .contact-field:valid:not(:placeholder-shown) {
+            border-color: #2ecc71;
+            background-color: #f9fffb;
+        }
+        
+        .contact-field:invalid:not(:placeholder-shown):not(:focus) {
+            border-color: #e74c3c;
+            background-color: #fff9f9;
+        }
+        
+        .contact-error {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 6px;
+            display: none;
+        }
+        
+        .contact-field:invalid:not(:placeholder-shown):not(:focus) ~ .contact-error {
+            display: block;
+        }
+        
+        /* Botão de envio */
+        .contact-submit {
+            background: linear-gradient(135deg, #4a6cf7 0%, #2a4bd7 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .contact-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+        }
+        
+        .contact-submit:active {
+            transform: translateY(0);
+        }
+        
+        .contact-submit:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Mensagens de status */
+        .contact-status {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .contact-success {
+            background-color: #d5f4e6;
+            color: #27ae60;
+            border: 1px solid #a3e4b9;
+            display: block;
+        }
+        
+        .contact-error-message {
+            background-color: #fdeaea;
+            color: #e74c3c;
+            border: 1px solid #f5b7b1;
+            display: block;
+        }
+        
+        .contact-loading {
+            background-color: #e8f4fd;
+            color: #3498db;
+            border: 1px solid #aed6f1;
+            display: block;
+        }
+        
+        /* Contador de caracteres */
+        .contact-counter {
+            text-align: right;
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        .contact-counter.warning {
+            color: #f39c12;
+        }
+        
+        .contact-counter.danger {
+            color: #e74c3c;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .contact-container {
+                margin: 10px;
+            }
+            
+            .contact-body {
+                padding: 25px;
+            }
+            
+            .contact-header {
+                padding: 25px 20px;
+            }
+            
+            .contact-title {
+                font-size: 24px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .contact-body {
+                padding: 20px;
+            }
+            
+            .contact-field {
+                padding: 12px 14px;
+            }
+            
+            .contact-submit {
+                padding: 14px 20px;
+            }
+        }
+
+        /* HONEYPOT (ESCONDIDO PARA HUMANOS, VISÍVEL PARA BOTS) */
+        .form-honeypot {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Placeholder para o header -->
+    <div id="header-placeholder"></div>
+        
+    <main>
+
+
+        <!-- Contact Start -->
+        <div class="container-fluid pt-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Vamos Conversar Sobre o Seu Caso?</h5>
+                    <h1 class="display-6">Entre em contato para uma orientação inicial, sem custo.</h1>
+                </div>
+                <div class="row g-5 mb-5">
+                    <div class="col-lg-3">
+                        <a href="/sobre/#" class="text-decoration-none" target="_self">
+                            <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
+                                style="height: 200px;">
+                                <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4"
+                                    style="width: 100px; height: 70px; transform: rotate(-15deg); background-color: #25D366!important;">
+                                    <i class="fa fa-2x fa-map-marked-alt text-white" style="transform: rotate(15deg);"></i>
+                                </div>
+                                <h6 class="mb-0 p-2"><span data-const="ENDERECO"></span></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="#" data-const-href="URL_WHATSAPP" class="text-decoration-none" target="_blank">
+                            <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
+                                style="height: 200px;">
+                                <div class="d-flex align-items-center justify-content-center rounded-circle mb-4"
+                                    style="width: 100px; height: 70px; transform: rotate(-15deg); background-color: #25D366;">
+                                    <i class="fa-brands fa-2x fa-whatsapp text-white" style="transform: rotate(15deg);"></i>
+                                </div>
+                                <h6 class="mb-0">
+                                    <span data-const="TELEFONE"></span>
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="/agendamento/#" class="text-decoration-none" target="_self">
+                            <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
+                                style="height: 200px;">
+                                <div class="d-flex align-items-center justify-content-center rounded-circle mb-4"
+                                    style="width: 100px; height: 70px; transform: rotate(-15deg); background-color: #25D366;">
+                                    <i class="fa fa-2x fa-calendar text-white" style="transform: rotate(15deg);"></i>
+                                </div>
+                                <h6 class="mb-0">
+                                    <span>AGENDAMENTO</span>
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
+                            style="height: 200px;">
+                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4"
+                                style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                                <i class="fa fa-2x fa-envelope-open text-white" style="transform: rotate(15deg);"></i>
+                            </div>
+                            <h6 class="mb-0"><span data-const="EMAIL"></span></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="height: 500px;">
+                        <div class="position-relative h-100">
+                            <iframe class="position-relative w-100 h-100"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4571.280759264398!2d-47.40459301322925!3d-22.583356273479097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8811cce00f0bb%3A0xcaa61571e326bdec!2sR.%20Arnold%20Bacan%2C%20825%20-%20Jardim%20Maria%20Flora%2C%20Limeira%20-%20SP%2C%2013480-388!5e1!3m2!1spt-BR!2sbr!4v1765823622249!5m2!1spt-BR!2sbr"
+                                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                                tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center position-relative" style="margin-top: -200px; z-index: 1;">
+                    <div class="col-lg-8">
+                        <div class="bg-white rounded p-5 m-5 mb-0">
+                            <!-- FORM -->
+                            <div class="contact-body">
+                                <!-- Formulário integrado com FormSubmit.co -->
+                                <form 
+                                    action="https://formspree.io/f/xanrzjyp"
+                                    method="POST"
+                                    class="contact-form"
+                                    id="contactForm"
+                                >
+                                    <!-- Configurações do FormSubmit -->
+                                    <input type="hidden" name="_subject" value="Novo Contato do Site">
+                                    <input type="hidden" name="_language" value="pt-BR">
+                                    <input type="hidden" name="_next" value="https://www.advocaciapatriciaferreira.com.br">
+                                    <input type="hidden" name="_format" value="plain">
+                                    
+                                    <!-- HONEYPOT FIELD (PROTEÇÃO ANTI-SPAM) -->
+                                    <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off">
+                                    <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+                                    <div class="contact-grid">
+                                        <div class="contact-group">
+                                            <label class="contact-label">
+                                                Nome Completo <span class="required">*</span>
+                                            </label>
+                                            <input 
+                                                class="contact-field"                                            
+                                                type="text" 
+                                                name="name"
+                                                id="name"
+                                                placeholder="Digite seu nome"
+                                                required
+                                                minlength="3"
+                                                pattern="[A-Za-zÀ-ÿ\s]{3,}"
+                                            >
+                                            <div class="contact-error">Nome deve ter pelo menos 3 letras</div>
+                                        </div>
+                                        
+                                        <div class="contact-group">
+                                            <label class="contact-label">
+                                                E-mail <span class="required">*</span>
+                                            </label>
+                                            <input 
+                                                type="email" 
+                                                name="email"
+                                                id="email"
+                                                class="contact-field"                                                
+                                                placeholder="seu@email.com"
+                                                required
+                                                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                                            >
+                                            <div class="contact-error">Digite um e-mail válido</div>
+                                        </div>
+                                        <div class="contact-group">
+                                            <label class="contact-label">
+                                                Assunto <span class="required">*</span>
+                                            </label>
+                                            <input 
+                                                class="contact-field"                                            
+                                                type="text" 
+                                                name="subject"
+                                                id="subject"
+                                                placeholder="Digite o Assunto"
+                                                required
+                                                minlength="3"
+                                                pattern="[A-Za-zÀ-ÿ\s]{3,}"
+                                            >
+                                            <div class="contact-error">Assunto deve ter pelo menos 3 letras</div>
+                                        </div>
+                                        
+                                        <div class="contact-group contact-full">
+                                            <label class="contact-label">
+                                                Mensagem <span class="required">*</span>
+                                            </label>
+                                            <textarea 
+                                                class="contact-field"
+                                                name="message"
+                                                id="message"
+                                                placeholder="Digite sua mensagem aqui..."
+                                                required
+                                                minlength="20"
+                                                maxlength="1000"
+                                                
+                                            ></textarea>
+                                            <div class="contact-counter" id="contactCounter">0/1000</div>
+                                            <div class="contact-error">Mensagem deve ter pelo menos 20 caracteres</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="submit" class="contact-submit" id="contactSubmit">
+                                        Enviar Mensagem
+                                    </button>
+                                    
+                                    <div class="contact-status" id="contactStatus"></div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        
+
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        
+
+
+        <!-- Back to Top -->
+        <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </main>
+    
+    <!-- Placeholder para o footer -->
+    <div id="footer-placeholder"></div>  
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+    <script  type="module" async src="/assets/js/constants.js"></script>
+    <script  type="module" async src="/assets/js/constants-loader.js"></script>
+    
+
+    <!-- <script type="module" async src="./assets/js/constants-loader.js"></script> -->
+
+    <!-- Fallback para navegadores sem módulos -->
+    <script nomodule>
+            document.querySelectorAll('[data-const]').forEach(function(el) {
+                var key = el.getAttribute('data-const');
+                if (constants[key]) el.textContent = constants[key];
+            });
+    </script>
+    <script>
+        // Função para carregar partials
+        async function loadPartial(elementId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+                
+                // Ativar link ativo no menu
+                if (elementId === 'header-placeholder') {
+                    setActiveMenu();
+                }
+            } catch (error) {
+                console.error(`Erro ao carregar ${filePath}:`, error);
+                document.getElementById(elementId).innerHTML = `
+                    <div style="color: red; padding: 1rem; border: 1px solid red;">
+                        Erro ao carregar conteúdo. Verifique se o arquivo ${filePath} existe.
+                    </div>
+                `;
+            }
+        }
+
+        // Definir menu ativo
+        function setActiveMenu() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.style.fontWeight = 'bold';
+                    link.style.backgroundColor = '#666';
+                }
+            });
+        }
+
+        // Carregar header e footer quando o DOM estiver pronto
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carregar header
+            if (document.getElementById('header-placeholder')) {
+                loadPartial('header-placeholder', '/assets/header.html');
+            }
+            
+            // Carregar footer
+            if (document.getElementById('footer-placeholder')) {
+                loadPartial('footer-placeholder', '/assets/footer.html');
+            }
+        });  
+        
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(r => r.text())
+                .then(html => document.getElementById(id).innerHTML = html)
+                .catch(e => console.error(e));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('header-placeholder', '/assets/header.html');
+            loadHTML('footer-placeholder', '/assets/footer.html');
+        });
+    </script>
+</body>
+
+</html>

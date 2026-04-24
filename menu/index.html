@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Advocacia Patrícia Ferreira</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            background-color: white;
+        }
+        
+        /* Logo */
+        .logo-container {
+            text-align: center;
+            margin: 20px 0 40px;
+            background-color: white;
+        }
+        
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 12px;
+            /* box-shadow: 0 4px 15px rgba(0,0,0,0.1); */
+        }
+        
+        /* Título */
+        .page-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Menu de Links */
+        .menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        .menu-link {
+            display: flex;
+            align-items: center;
+            padding: 18px 25px;
+            background-color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid transparent;
+        }
+        
+        .menu-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+            border-left: 5px solid;
+        }
+        
+        .menu-link i {
+            font-size: 1.5rem;
+            margin-right: 20px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .link-text {
+            flex: 1;
+            font-size: 1.1rem;
+        }
+        
+        .link-arrow {
+            color: #999;
+            font-size: 1.2rem;
+        }
+        
+        /* Cores específicas para cada link */
+        .menu-link:nth-child(1) { border-left-color: #1a73e8; }
+        .menu-link:nth-child(1):hover { background-color: #e8f0fe; }
+        .menu-link:nth-child(1) i { color: #1a73e8; }
+        
+        .menu-link:nth-child(2) { border-left-color: #25d366; }
+        .menu-link:nth-child(2):hover { background-color: #e6f8ed; }
+        .menu-link:nth-child(2) i { color: #25d366; }
+        
+        .menu-link:nth-child(3) { border-left-color: #ea4335; }
+        .menu-link:nth-child(3):hover { background-color: #fdeaea; }
+        .menu-link:nth-child(3) i { color: #ea4335; }
+        
+        .menu-link:nth-child(4) { border-left-color: #0077b5; }
+        .menu-link:nth-child(4):hover { background-color: #e6f1f8; }
+        .menu-link:nth-child(4) i { color: #0077b5; }
+        
+        .menu-link:nth-child(5) { border-left-color: #1877f2; }
+        .menu-link:nth-child(5):hover { background-color: #e7f3ff; }
+        .menu-link:nth-child(5) i { color: #1877f2; }
+        
+        .menu-link:nth-child(6) { border-left-color: #e4405f; }
+        .menu-link:nth-child(6):hover { background-color: #fce9ed; }
+        .menu-link:nth-child(6) i { color: #e4405f; }
+        
+        /* Botão Voltar */
+        .btn-voltar {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 30px auto 0;
+            padding: 14px 24px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-voltar:hover {
+            background-color: #5a6268;
+        }
+        
+        /* Rodapé */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .logo {
+                max-width: 250px;
+            }
+            
+            .page-title {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+            
+            .menu-link {
+                padding: 15px 20px;
+            }
+            
+            .menu-link i {
+                font-size: 1.3rem;
+                margin-right: 15px;
+            }
+            
+            .link-text {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                max-width: 200px;
+            }
+            
+            .page-title {
+                font-size: 1.3rem;
+            }
+            
+            .menu-link {
+                padding: 12px 15px;
+            }
+            
+            .menu-link i {
+                font-size: 1.2rem;
+                margin-right: 12px;
+            }
+            
+            .link-text {
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .logo {
+                max-width: 180px;
+            }
+            
+            .menu-link {
+                padding: 10px 12px;
+            }
+            
+            .menu-link i {
+                font-size: 1.1rem;
+                margin-right: 10px;
+            }
+            
+            .link-text {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid pt-5">
+        <div class="container">
+            
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="logoAdvPatricia-small.jpg" alt="Advocacia Patrícia Ferreira" class="logo">
+            </div>
+            
+            <!-- Título da Página -->
+            <h1 class="page-title">Conecte-se Conosco</h1>
+            
+            <!-- Menu de Links -->
+            <div class="menu-links">
+                <!-- Site Oficial -->
+                <a href="https://www.advocaciapatriciaferreira.com.br/" target="_blank" class="menu-link">
+                    <i class="fas fa-globe"></i>
+                    <span class="link-text">Web Site Advocacia Patrícia Ferreira</span>
+                    <i class="fas fa-chevron-right link-arrow"></i>
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5519981959907" target="_blank" class="menu-link">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="link-text">WhatsApp</span>
+                    <i class="fas fa-chevron-right link-arrow"></i>
+                </a>
+                
+                <!-- Agendamento -->
+                <a href="https://www.advocaciapatriciaferreira.com.br/agendamento/" target="_blank" class="menu-link">
+                    <i class="fas fa-calendar-check"></i>
+                    <span class="link-text">Agendamento Online</span>
+                    <i class="fas fa-chevron-right link-arrow"></i>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/advocaciapatriciaferreira" target="_blank" class="menu-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="link-text">LinkedIn</span>
+                    <i class="fas fa-chevron-right link-arrow"></i>
+                </a>
+                
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61585122471528" target="_blank" class="menu-link">
+                    <i class="fab fa-facebook"></i>
+                    <span class="link-text">Facebook</span>
+                    <i class="fas fa-chevron-right link-arrow"></i>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/adv.patricia.ferreira/" target="_blank" class="menu-link">
+                    <i class="fab fa-instagram"></i>
+                    <span class="link-text">Instagram</span>
+                    <i class="fas fa-chevron-right link-arrow"></i>
+                </a>
+            </div>
+            
+            
+            <!-- Rodapé -->
+            <div class="footer">
+                <div class="row">
+                    <div class="col-6"><p>Advocacia Patrícia Ferreira © 2025</p></div>
+                    <div class="col-6"><p class="mb-0">Designed by <a class="text-primary" href="https://chaordium.com"
+                        target="_blank">Chaordium &copy;</a>.
+                </p></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

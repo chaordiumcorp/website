@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AGENDAMENTO - Advocacia Patrícia Ferreira</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/assets/css/fontellod4d0.css" rel="stylesheet">
+    <!-- <link href="./assets/css/js_composer.css" rel="stylesheet"> -->
+
+
+
+    <!-- Preload crítico -->
+    <!-- <link rel="preload" href="./assets/js/constants-loader.js" as="script">
+    <link rel="preload" href="./assets/css/constants.css" as="style"> -->
+    
+    <!-- Fallback CSS (carrega rápido) -->
+    <link rel="stylesheet" href="/assets/css/constants.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/agenda.css">
+</head>
+
+<body>
+    <!-- Placeholder para o header -->
+    <div id="header-placeholder"></div>
+        
+    <main>
+
+
+        <!-- Contact Start -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-12 mb-5 mb-lg-0">
+                        <div class="mb-4">
+                            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Agendamentos</h5>
+                            <h1 class="display-4">Agende Sua Consulta de Forma Rápida</h1>
+                        </div>
+                        <p class="mb-5">EirConverse com nossos advogados por vídeo ou pessoalmente.<br>
+                            Escolha o horário que melhor se adapta à sua rotina.</p>
+                        <!-- <a class="btn btn-primary rounded-pill py-3 px-5 me-3" href="#!">Find Doctor</a>
+                        <a class="btn btn-outline-primary rounded-pill py-3 px-5" href="#!">Read More</a> -->
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-5 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="text-center card-body p-4">
+                                    <i class="fa fa-video fa-3x text-primary mb-3"></i>
+                                    <h4 class="card-title">Consultas Online</h4>
+                                    <p class="card-text">Via Google Meet, de onde você estiver. Basta ter internet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-5 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="text-center card-body p-4">
+                                    <i class="fa fa-building fa-3x text-primary mb-3"></i>
+                                    <h4 class="card-title">Consultas Presenciais</h4>
+                                    <p class="card-text">Em nosso escritório, com toda privacidade e conforto.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info border-0">
+                            <h6 class="alert-heading"><i class="fa fa-info-circle me-2"></i>Como funciona:</h6>
+                            <p class="mb-2">1. Escolha o tipo de consulta (online ou presencial)</p>
+                            <p class="mb-2">2. Selecione um horário disponível no calendário abaixo</p>
+                            <p class="mb-0">3. Receba a confirmação por e-mail com todos os detalhes</p>
+                            <a id="btn-agendar" class="btn btn-outline-dark rounded-pill py-3 px-5" href="/agendamento/agendamento-mobile.html">AGENDE AGORA</a>
+                        </div>
+                    </div>
+                    <div class="desktop-only bg-white text-center rounded p-5" style="min-height: 650px;">
+                        <iframe id="agenda-iframe"
+                            src="https://calendar.app.google/g6c2rzTV8Vvg2Pkh7"
+                            frameborder="0" 
+                            scrolling="no" 
+                            width="100%" height="590"
+                            loading="lazy"
+                            >
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+        <!-- Back to Top -->
+        <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </main>
+    
+    <!-- Placeholder para o footer -->
+    <div id="footer-placeholder"></div>  
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+    <script  type="module" async src="/assets/js/constants.js"></script>
+    <script  type="module" async src="/assets/js/constants-loader.js"></script>
+    
+
+    <!-- <script type="module" async src="./assets/js/constants-loader.js"></script> -->
+
+    <!-- Fallback para navegadores sem módulos -->
+    <script nomodule>
+            document.querySelectorAll('[data-const]').forEach(function(el) {
+                var key = el.getAttribute('data-const');
+                if (constants[key]) el.textContent = constants[key];
+            });
+    </script>
+    <script>
+        // Função para carregar partials
+        async function loadPartial(elementId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+                
+                // Ativar link ativo no menu
+                if (elementId === 'header-placeholder') {
+                    setActiveMenu();
+                }
+            } catch (error) {
+                console.error(`Erro ao carregar ${filePath}:`, error);
+                document.getElementById(elementId).innerHTML = `
+                    <div style="color: red; padding: 1rem; border: 1px solid red;">
+                        Erro ao carregar conteúdo. Verifique se o arquivo ${filePath} existe.
+                    </div>
+                `;
+            }
+        }
+
+        // Definir menu ativo
+        function setActiveMenu() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.style.fontWeight = 'bold';
+                    link.style.backgroundColor = '#666';
+                }
+            });
+        }
+
+        // Carregar header e footer quando o DOM estiver pronto
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carregar header
+            if (document.getElementById('header-placeholder')) {
+                loadPartial('header-placeholder', '/assets/header.html');
+            }
+            
+            // Carregar footer
+            if (document.getElementById('footer-placeholder')) {
+                loadPartial('footer-placeholder', '/assets/footer.html');
+            }
+        });  
+        
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(r => r.text())
+                .then(html => document.getElementById(id).innerHTML = html)
+                .catch(e => console.error(e));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('header-placeholder', '/assets/header.html');
+            loadHTML('footer-placeholder', '/assets/footer.html');
+        });
+    </script>
+</body>
+
+</html>
